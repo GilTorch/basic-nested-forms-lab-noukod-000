@@ -15,9 +15,9 @@ class RecipesController < ApplicationController
   end
 
   def create
-      @recipe = Recipe.create(recipes_params)
-      redirect_to recipe_path(@recipe)
-    end
+    @recipe = Recipe.create(recipes_params)
+    redirect_to recipe_path(@recipe)
+  end
   def recipes_params(*args)
     params.require(:recipe).permit(*args)
   end
