@@ -20,6 +20,8 @@ class RecipesController < ApplicationController
     puts recipes_params.inspect
     redirect_to recipes_path
   end
+
+
   def recipes_params(*args)
     params.require(:recipe).permit(*args)
   end
