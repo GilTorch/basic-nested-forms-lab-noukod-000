@@ -17,6 +17,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.create(recipes_params)
     puts @recipe.inspect
+    puts recipes_params.inspect
     redirect_to recipes_path
   end
   def recipes_params(*args)
